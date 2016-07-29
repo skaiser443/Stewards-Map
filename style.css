@@ -1,0 +1,49 @@
+body {
+	margin: 0;
+	padding: 0;
+	
+}
+
+p.body-text {
+	font-size: 12.5;
+	
+}
+
+p.footer-text {
+	font-size: 9.5;
+	
+}
+
+#map {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0px;
+	width: 100%;
+	
+}
+
+#sidebar {
+	position: absolute;
+	top: 15px;
+	bottom: 15px;
+	width: 300px;
+	overflow: auto;
+	background: rgba(255, 255, 255, 0.7);
+	font-family: "Arial";
+	padding-left: 10px;
+	
+}
+
+
+#geocoder-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#geocoder-container > div {
+    min-width:50%;
+    margin-left:25%;
+}
