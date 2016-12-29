@@ -1,33 +1,82 @@
 <html>
-
 <header>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <meta charset=utf-8 />
-  <title>Stewards</title>
+  <title>Potomac Watershed Groups</title>
   <link href='https://www.mapbox.com/base/latest/base.css' rel='stylesheet' />
-  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.js'></script>
-  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.css' rel='stylesheet' />
-  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.3.0/mapbox-gl-geocoder.css' type='text/css' /> 
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.25.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.25.1/mapbox-gl.css' rel='stylesheet' />
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.3.1/mapbox-gl-geocoder.css' type='text/css' />
   <link rel="stylesheet" href="style.css"/>
 </header>
 
 <body>
-  <div id = "map"></div>
-  <div id = "geocoder"></div>
-  <div id = "sidebar">
-    <div id = "logo"> <img src="Logo_Transparent.png" alt="logo image" style="width: 120px; height: 125px;"</div>
-  <p><h2>Potomac Watershed Groups</h2>In an effort to enable individuals seeking to engage in stewardship opportunities to more easily find and join their local watershed group(s) and connect with other stewardship based organizations in their area, ICPRB has created a web-based map displaying watershed groups and organizations within the Potomac basin.<br></br>
-Results of the 2011 Potomac River Basin Watershed Group Survey have been compiled and can be viewed <a href='http://www.potomacriver.org/wp-content/uploads/2014/12/Watershed_Group_Survey_results_FINAL.pdf'>here</a>.<br></br>
-If you have questions, suggestions or comments, please contact us at <a href='mailto:info@icprb.org'>info@icprb.org</a> or <a href='tel:301-274-8107'>301-274-8107</a>.<br></br>
-Complete <a href='https://www.potomacriver.org/focus-areas/communication-and-education/watershed-information/potomac-watershed-groups/watershed-group-directory-map/watershed-group-directory-map-questionnaire/'>this form</a> to add or edit your group on the map.</p>
+<!--DO NOT CHANGE ANYTHING IN THIS FIRST SECTION OF HTML BODY-->
+
+<!-- HEADER FOR DESKTOP -->
+  <div class="header"> 
+      <img alt="Great Falls" src="elements/cumminsGreat_Falls_p4a-Large.jpg">
+	  <div class="header-overlay">
+	      <h1 class="site-title">Potomac River Basin Atlas</h1>
+      </div>
+      <img class="logo" alt="ICPRB Logo" src="elements/logo.png" width="" height="">
+      <div class="navigation">
+	      <ul>
+		    <li><a href="https://www.potomacriver.org/about-us/">About ICPRB</a></li>
+			<li><a href="https://www.potomacriver.org/resources/">Resources</a></li>
+			<li><a href="https://www.potomacriver.org/resources/maps/">Maps</a></li>
+		  </ul>
+	  </div>
+	  <div class="social">
+	      <div class="social-text">Interstate Commission on the Potomac River Basin</div>
+	  	  <a href="https://www.facebook.com/PotomacRiverCommission" target="_blank"><img class="social-fb" alt="Facebook" src="elements/icons/facebook.png" width="15px" height="20px"></a>
+		  <a href="https://www.linkedin.com/company-beta/8603011?pathWildcard=8603011" target="_blank"><img class="social-linkedin" alt="LinkedIn" src="elements/icons/linkedin.png" width="20px" height="20px"></a>
+		  <a href="https://twitter.com/ICPRB" target="_blank"><img class="social-twitter" alt="Twitter" src="elements/icons/twitter.png" width="15px" height="15px"></a>
+		  <a href="https://www.instagram.com/icprb/" target="_blank"><img class="social-insta" alt="Instagram" src="elements/icons/instagram.png" width="20px" height="20px"></a>
+	  </div>
   </div>
+<!-- END HEADER FOR DESKTOP -->
+
+<!-- HEADER FOR MOBILE -->
+
+<!-- END HEADER FOR MOBILE -->
+
+<!--END FIRST SECTION OF HTML BODY-->
+
+<!--UPDATE ELEMENTS PER NOTES BELOW FOR EACH NEW MAP CREATED-->
   
+  <div class="row">
+  
+  <div class="col-2 sidebar">
+      <div class="sidebar-title-block">Watershed Groups</div><!--Add title of map here-->
+	  <div class="sidebar-title-text">A map displaying watershed groups or organizations within the Potomac basin.</div>
+      <img class="image" alt="Volunteer" src="elements/nfs02.jpg" width="" height="">
+<!--      <div id="link-group">
+
+      </div>  -->
+	  <div class="sidebar-text-block">
+	    <div class="sidebar-text">In an effort to enable individuals seeking to engage in stewardship opportunities to more easily find and join
+		their local watershed group(s) and connect with other stewardship based organizations in their area, ICPRB has created a web-based map 
+		displaying watershed groups/organizations within the Potomac basin<br></br>
+		Results of the 2011 Potomac River Basin Watershed Group Survey have been compiled and can be viewed <a href='http://www.potomacriver.org/wp-content/uploads/2014/12/Watershed_Group_Survey_results_FINAL.pdf' target=_blank>here</a>.<br></br>
+		If you have questions, suggestions or comments, please contact us at <a href='mailto:info@icprb.org'>info@icprb.org</a> or <a href='tel:301-274-8107'>301-274-8107</a>.<br></br>
+		Complete <a href='https://www.potomacriver.org/focus-areas/communication-and-education/watershed-information/potomac-watershed-groups/watershed-group-directory-map/watershed-group-directory-map-questionnaire/' target=_blank>this form</a> to add or edit your group on the map.<!--Insert additional text, if necessary, here. If no additional text is required, delete placehoder text.-->
+		</div>	  
+      </div>
+  </div>	  
+
+<!--END SIDEBAR-->
+  
+  <div id="map" class="col-6"></div>
+  
+  </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.9.0/lodash.min.js"></script>
-  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.3.0/mapbox-gl-geocoder.js'></script>  
-  <script src = 'script.js'></script>
+  <script src= 'https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.3.1/mapbox-gl-geocoder.js'></script>  
+  <script src= 'script.js'></script>
   
+
+
 </body>
 
 </html>
-
-
